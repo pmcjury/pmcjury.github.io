@@ -1,51 +1,37 @@
-#Pre-building
+---
+layout: default
+---
 
-I've just started to setup my personal site. I had previoulsy used wordpress, but I rarely put new content on the site. As a new years resolution I've decided to start wirting and sharing some content. I wanted it to be easy and static, so github pages is for me. I write alot of markdown at work as my documentation syntax of choice, so jekyll, octopress, etc makes the most sense for me. Prose.io is also way cool for just editing the content after you've built the site ( as of now nothing is built so it's juts http://prose.io/ ).
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h1>
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
 
-One of the main things I want to share is my experience in software development, and mostly focusing on _gotchas_. I routinly search for problems other people have had in order to find a quick solution to my problems. 
+    <span class="post-date">{{ post.date | date_to_string }}</span>
 
-> How do I fix this?
+    {{ post.content }}
+  </div>
+  {% endfor %}
+</div>
 
-> You know who knows? The internet!
-
-When I can't find them on the internet I actually have to figure things out for myself. I usually do, because if I didn't I would be fired, and then I go on my merry way. Lately though I have been feeling guilty for not giving back. So as a new years resolution for 2014 ( hopefully there will be no strike through for that next year and 2015 in its place instead ) I've decided to share my gotchas, caveats, and general practices of crap I do right and wrong.
-
-Here's a first go:
-
-##Chef : Why won't my data bag work? 
-I've come across this problem a few times. I have my data bag uploaded. I can see the data bag using.
-
-```
-knife node data bag show cool_guys pmcjury
-is_cool : true
-is_awesome : mostly
-can_get_on_it : always
-```
-
-But in my recipe the variable is never set when accessing the data bag.
-
-```
-pmcjury = Chef::EncryptedDataBagItem.load(:cool_guys, :pmcjury, secret_key)
-pmcjury[:is_cool] # will be nil
-```
-
-I don't know if it's me or what, but I often switch from ruby to php to js to scala to php to java to staring at the screen... Any how enough excuses, switching syntaxes sometimes gets me into trouble. I love symbols in ruby and often like to use them instead of strings inside Chef recipes to access atrributes.
-
-```node[:pmcjury][:is_cool] = true```
-
-VS
-
-```node['pmcjury']['is_cool'] = true```
-
-If you use http://acrmp.github.io/foodcritic/  ( should also be using https://github.com/sethvargo/chefspec ), the linter will yell at you if you mix and match string and symbols when accessing attributes. 
-
-However, when accessing data bags you *CAN NOT* use symbols to access the items. I haven't looked at the internals of it, but it's probably something to do with not checking if ```is_a? Symbol``` or conversion of a symbol in a string interpolation. I could figure it out, but it's beyond the scope of this article.
-
-In conclusion, *USE STRING TO ACCESS DATA BAG ITEMS*. You cannot use symbols
-
-```
-pmcjury = Chef::EncryptedDataBagItem.load('cool_guys', 'pmcjury', secret_key)
-pmcjury['is_cool'] # true... so, so true
-```
-
-## Happy New Year on the last dat of 2013
+<!-- Pagination links -->
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a href="/page{{paginator.next_page}}" class="older">Older</a>
+  {% else %}
+    <span class="next">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a href="/" class="newer">Newer</a>
+    {% else %}
+      <a href="/page{{paginator.previous_page}}" class="newer">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="previous">Newer</span>
+  {% endif %}
+</div>

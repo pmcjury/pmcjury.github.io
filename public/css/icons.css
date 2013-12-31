@@ -1,0 +1,145 @@
+.icons-16{
+	border:0;
+	width:16px;
+	height:16px;
+	display: inline-block;
+}
+.twitter-16{
+	background-image: url(/public/images/twitter/twitter-16.png);
+}
+.github-16{
+	background-image: url(/public/images/github/github-16.png);
+}
+.linkedin-16{
+	background-image: url(/public/images/linkedin/linkedin-16.png);
+}
+.twitter-16-black{
+	background-image: url(/public/images/twitter/twitter-16-black.png);
+}
+.github-16-black{
+	background-image: url(/public/images/github/github-16-black.png);
+}
+.linkedin-16-black{
+	background-image: url(/public/images/linkedin/linkedin-16-black.png);
+}
+.icons-32{
+	border:0;
+	width:32px;
+	height:32px;
+	display: inline-block;
+}
+.twitter-32{
+	background-image: url(/public/images/twitter/twitter-32.png);
+}
+.github-32{
+	background-image: url(/public/images/github/github-32.png);
+}
+.linkedin-32{
+	background-image: url(/public/images/linkedin/linkedin-32.png);
+}
+.twitter-32-black{
+	background-image: url(/public/images/twitter/twitter-32-black.png);
+}
+.github-32-black{
+	background-image: url(/public/images/github/github-32-black.png);
+}
+.linkedin-32-black{
+	background-image: url(/public/images/linkedin/linkedin-32-black.png);
+}
+.icons-64{
+	border:0;
+	width:64px;
+	height:64px;
+	display: inline-block;
+}
+.twitter-64{
+	background-image: url(/public/images/twitter/twitter-64.png);
+}
+.github-64{
+	background-image: url(/public/images/github/github-64.png);
+}
+.linkedin-64{
+	background-image: url(/public/images/linkedin/linkedin-64.png);
+}
+.twitter-64-black{
+	background-image: url(/public/images/twitter/twitter-64-black.png);
+}
+.github-64-black{
+	background-image: url(/public/images/github/github-64-black.png);
+}
+.linkedin-64-black{
+	background-image: url(/public/images/linkedin/linkedin-64-black.png);
+}
+.icons-128{
+	border:0;
+	width:128px;
+	height:128px;
+	display: inline-block;
+}
+.twitter-128{
+	background-image: url(/public/images/twitter/twitter-128.png);
+}
+.github-128{
+	background-image: url(/public/images/github/github-128.png);
+}
+.linkedin-128{
+	background-image: url(/public/images/linkedin/linkedin-128.png);
+}
+.twitter-128-black{
+	background-image: url(/public/images/twitter/twitter-128-black.png);
+}
+.github-128-black{
+	background-image: url(/public/images/github/github-128-black.png);
+}
+.linkedin-128-black{
+	background-image: url(/public/images/linkedin/linkedin-128-black.png);
+}
+.icons-256{
+	border:0;
+	width:256px;
+	height:256px;
+	display: inline-block;
+}
+.twitter-256{
+	background-image: url(/public/images/twitter/twitter-256.png);
+}
+.github-256{
+	background-image: url(/public/images/github/github-256.png);
+}
+.linkedin-256{
+	background-image: url(/public/images/linkedin/linkedin-256.png);
+}
+.twitter-256-black{
+	background-image: url(/public/images/twitter/twitter-256-black.png);
+}
+.github-256-black{
+	background-image: url(/public/images/github/github-256-black.png);
+}
+.linkedin-256-black{
+	background-image: url(/public/images/linkedin/linkedin-256-black.png);
+}
+
+.icons-512{
+	border:0;
+	width:512px;
+	height:512px;
+	display: inline-block;
+}
+.twitter-512{
+	background-image: url(/public/images/twitter/twitter-512.png);
+}
+.github-512{
+	background-image: url(/public/images/github/github-512.png);
+}
+.linkedin-512{
+	background-image: url(/public/images/linkedin/linkedin-512.png);
+}
+.twitter-512-black{
+	background-image: url(/public/images/twitter/twitter-512-black.png);
+}
+.github-512-black{
+	background-image: url(/public/images/github/github-512-black.png);
+}
+.linkedin-512-black{
+	background-image: url(/public/images/linkedin/linkedin-512-black.png);
+}

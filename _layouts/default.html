@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  {% include head.html %}
+
+  <body class="theme-base-0d">
+
+    <header class="masthead">
+      <div class="masthead-inner">
+        <h1>
+          {% if page.url == '/about/' %}
+            <a href="{{ site.url }}">{{ site.title }}</a>
+          {% else %}
+            <a href="{{ site.url }}/about">{{ site.title }}</a>
+          {% endif %}
+        </h1>
+        <p class="lead">
+          <a href="http://github.com/pmcjury" class="icons-64 github-64"></a>
+          <a href="http://twitter.com/pmcjury" class="icons-64 twitter-64"></a>
+          <a href="http://linkedin.com/in/pmcjury" class="icons-64 linkedin-64"></a>
+        </p>
+        <div class="colophon">
+          <!-- <ul class="colophon-links">
+            <li>Currently v{{ site.version }}</li>
+          </ul> -->
+          <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }} </p>
+          <p>All rights reserved</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="content container">
+      {{ content }}
+    </div>
+
+  </body>
+</html>
